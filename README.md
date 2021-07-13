@@ -8,31 +8,31 @@ We can split these tests into functional tests and visual tests.
 
 ## Table of Contents
 
-1. [Have simple project structure](#)
-2. [Given-When-Then](#)
-3. [Make use of lint rules](#)
-4. [Test the test code more frequently](#)
-5. [Do not duplicate coverage](#)
-6. [Do not test everything](#)
-7. [Do not ignore flaky tests](#)
-8. [Do not place assertions inside page objects](#)
-9. [Do not place assertions inside of try/catch blocks](#)
-10. [Do not add logic to tests](#)
-11. [Do not use XPath locator](#)
-12. [Do not use IDs](#)
-13. [Do not use text locators](#)
-14. [Use page objects](#)
-15. [Test case only call page object’s methods](#)
-16. [One file, one-page object class](#)
-17. [Make tests independent at the file level](#)
-18. [Navigate to the page under test before each test](#)
-19. [Use async & await](#)
-20. [Mock all API calls](#)
-21. [Replace browser.sleep with browser.wait](#)
-22. [Name the screenshots properly](#)
-23. [Avoid full-page screenshots](#)
-24. [Scaling visual testing](#)
-25. [Use a component library](#)
+1. [Have simple project structure](#have-simple-project-structure)
+2. [Given-When-Then](#given-when-then)
+3. [Make use of lint rules](#make-use-of-lint-rules)
+4. [Test the test code more frequently](#test-the-test-code-more-frequently)
+5. [Do not duplicate coverage](#do-not-duplicate-coverage)
+6. [Do not test everything](#do-not-test-everything)
+7. [Do not ignore flaky tests](#do-not-ignore-flaky-tests)
+8. [Do not place assertions inside page objects](#do-not-place-assertions-inside-page-objects)
+9. [Do not place assertions inside of try/catch blocks](#do-not-place-assertions-inside-of-trycatch-blocks)
+10. [Do not add logic to tests](#do-not-add-logic-to-tests)
+11. [Do not use XPath locator](#do-not-use-xpath-locator)
+12. [Do not use IDs](#do-not-use-ids)
+13. [Do not use text locators](#do-not-use-text-locators)
+14. [Use page objects](#use-page-objects)
+15. [Test case only call page object's methods](#test-case-only-call-page-objects-methods)
+16. [One file, one-page object class](#one-file-one-page-object-class)
+17. [Make tests independent at the file level](#make-tests-independent-at-the-file-level)
+18. [Navigate to the page under test before each test](#navigate-to-the-page-under-test-before-each-test)
+19. [Use async & await](#use-async--await)
+20. [Mock all API calls](#mock-all-api-calls)
+21. [Replace browser.sleep with browser.wait](#replace-browsersleep-with-browserwait)
+22. [Name the screenshots properly](#name-the-screenshots-properly)
+23. [Avoid full-page screenshots](#avoid-full-page-screenshots)
+24. [Scaling visual testing](#scaling-visual-testing)
+25. [Use a component library](#use-a-component-library)
 
 ## Have simple project structure
 
@@ -53,7 +53,7 @@ The Given-When-Then formula is a template intended to guide the writing of accep
 Linters can catch severe issues like errors that are not thrown correctly and losing information.
 A set of plugins were built specifically for inspecting the tests code patterns and discover issues.
 For example, [eslint-plugin-protractor](https://www.npmjs.com/package/eslint-plugin-protractor) catches common Protractor errors, follow the best practices for writing Protractor tests, but it also helps to maintain good and reliable element locators.
-If we are using Cucumber, it´s recommend to use [gherkin-lint](https://www.npmjs.com/package/gherkin-lint), a plugin to analyze feature files and runs linting against the default rules, and the optional rules specified in `.gherkin-lintrc` file.
+If we are using Cucumber, it's recommend to use [gherkin-lint](https://www.npmjs.com/package/gherkin-lint), a plugin to analyze feature files and runs linting against the default rules, and the optional rules specified in `.gherkin-lintrc` file.
 
 ## Test the test code more frequently
 
@@ -62,8 +62,8 @@ The earlier you found the issues, the lower cost you need to pay for fixing them
 
 ## Do not duplicate coverage
 
-Don´t create functional tests for features coverage by other tests.
-Let’s say you have created a new UI component.
+Don't create functional tests for features coverage by other tests.
+Let's say you have created a new UI component.
 If you can cover the functionality in a unit test, you should do it.
 Unit tests are generally easier to maintain, less flakey, and less expensive to run in the CI pipeline.
 Functional Tests should be covering the areas only they can cover.
@@ -98,7 +98,7 @@ Expect errors instead of catching them when an error is expected.
 Avoid using `if` statements and `for` loops.
 When we add logic, our test may pass without testing anything, or may run very slowly.
 The logic of code inherently requires a premise, a condition, and a conclusion.
-If a test were to include logic, therefore, it would not be a “one-concern” test.
+If a test were to include logic, therefore, it would not be a "one-concern" test.
 
 ## Do not use XPath locator
 
@@ -125,15 +125,15 @@ Page Objects help us write cleaner tests by encapsulating information about the 
 A page object can be reused across multiple tests, and if the template of our application changes, we only need to update the page object.
 Among many design patterns to develop test cases, Page Object stands out because of the great benefits it brings to the automation teams.
 
-## Test case only call page object’s methods
+## Test case only call page object's methods
 
 This is a rule of thumb for boosting code reusability and maintainability.
-Even if we just need to click on a control, we still must wrap the interaction in a page object’s method and call it from the test side.
-Doing this, when either the requirement or the AUT’s design is changed, makes the only place needing to be refactored just the page object’s method.
+Even if we just need to click on a control, we still must wrap the interaction in a page object's method and call it from the test side.
+Doing this, when either the requirement or the AUT's design is changed, makes the only place needing to be refactored just the page object's method.
 
 ## One file, one-page object class
 
-By only defining a single page object class in a file, along with user-friendly names for the class and the file, the project will be much more manageable and recognizable no matter of the project’s size (small or large-scale).
+By only defining a single page object class in a file, along with user-friendly names for the class and the file, the project will be much more manageable and recognizable no matter of the project's size (small or large-scale).
 It is surprisingly easy to find a class or file when designing our page objects this way, so developers should never struggle to look up for any page object class.
 
 ## Make tests independent at the file level
@@ -146,12 +146,12 @@ Make the tests independent at the file level because the order in which they run
 
 This practice assures that the page under test is in a clean state.
 It is also recommended to have a suite that navigates through the major routes of the app.
-Makes sure the major parts of the application are correctly connected, users usually don’t navigate by manually entering urls and gives us confidence about permissions.
+Makes sure the major parts of the application are correctly connected, users usually don't navigate by manually entering urls and gives us confidence about permissions.
 
 ## Use async & await
 
 Everyone has heard about the dreadful nightmare in JavaScript named [Callback Hell](http://callbackhell.com/) or [Pyramid of Doom](https://en.wikipedia.org/wiki/Pyramid_of_doom_(programming)).
-Luckily, JavaScript has been improved and we now have the async & await feature to deal better with the JavaScript’s asynchronous behavior.
+Luckily, JavaScript has been improved and we now have the async & await feature to deal better with the JavaScript's asynchronous behavior.
 Tools like [Protractor](https://www.protractortest.org/) or [Puppeteer](https://pptr.dev/) use Promises.
 Together with Promise, `async & await` will help flat out our code and make it simpler and more understandable.
 
@@ -159,13 +159,13 @@ Together with Promise, `async & await` will help flat out our code and make it s
 
 This rule is a bit controversial, in the sense that opinions are very divided when it comes to what the best practice is.
 Some developers argue that e2e tests should use mocks for everything in order to avoid external network calls and have a second set of integration tests to test the APIs and database.
-Other developers argue that e2e tests should operate on the entire system and be as close to the “real deal” as possible.
-To solve this, it’s recommended to create a smoke test suite to run in the production environment with “real data”.
+Other developers argue that e2e tests should operate on the entire system and be as close to the "real deal" as possible.
+To solve this, it's recommended to create a smoke test suite to run in the production environment with "real data".
 
 ## Replace browser.sleep with browser.wait
 
 If you are using `browser.sleep()` in Protractor, you are doing it wrong.
-The problem with is that it’s fragile and will sometimes fail if the system runs slower than normal.
+The problem with is that it's fragile and will sometimes fail if the system runs slower than normal.
 These occasional failures are solved by increasing the timeout value.
 This introduces additional latency into the test cycle which increases the feedback time, which is bad.
 Instead, you can use `browser.wait()` and [Expected Conditions](https://www.protractortest.org/#/api?view=ProtractorExpectedConditions) to wait for specific conditions in the application to be true.
