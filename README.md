@@ -192,7 +192,7 @@ Some people use an independent repository just for visual testing.
 
 ## Follow the Pattern Library
 
-If your team has an established component library, writing tests that map to our individual components can make our life much, much easier.
+If your team has an established component library, writing tests that map to your individual components can make your life much, much easier.
 It is much easier to pinpoint bugs by testing one component at a time and writing a test case for each of its states.
 
 ## Bibliography
