@@ -32,7 +32,7 @@ We can split these tests into functional tests and visual tests.
 22. [Name the screenshots properly](#name-the-screenshots-properly)
 23. [Avoid full-page screenshots](#avoid-full-page-screenshots)
 24. [Scaling visual testing](#scaling-visual-testing)
-25. [Use a component library](#follow-the-pattern-library)
+25. [Follow the Pattern Library](#follow-the-pattern-library)
 
 ## Have simple project structure
 
