@@ -32,7 +32,7 @@ We can split these tests into functional tests and visual tests.
 22. [Name the screenshots properly](#name-the-screenshots-properly)
 23. [Avoid full-page screenshots](#avoid-full-page-screenshots)
 24. [Scaling visual testing](#scaling-visual-testing)
-25. [Use a component library](#use-a-component-library)
+25. [Use a component library](#follow-the-pattern-library)
 
 ## Have simple project structure
 
@@ -190,7 +190,7 @@ These tools prevent the repo from growing out of control.
 However, it is recommended to create a new repository to store the baseline images.
 Some people use an independent repository just for visual testing.
 
-## Use a component library
+## Follow the Pattern Library
 
 If your team has an established component library, writing tests that map to our individual components can make our life much, much easier.
 It is much easier to pinpoint bugs by testing one component at a time and writing a test case for each of its states.
